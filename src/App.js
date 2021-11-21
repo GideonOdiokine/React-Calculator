@@ -37,7 +37,7 @@ function App() {
           <Button>=</Button>
           <Button>-</Button>
         </div>
-        <ClearButton>Clear</ClearButton>
+        <ClearButton handleClear={() => setInput("")} >Clear</ClearButton>
       </div>
     </div>
 

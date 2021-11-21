@@ -9,27 +9,31 @@ import ClearButton from "./components/ClearButton";
 
 function App() {
   const [input, setInput] = useState("")
+
+  const addToInput = (val) => {
+    setInput(input + val)
+  }
   return (
     <div className="app">
       <div className="calc-wrapper">
         <Input input={input} />
         <div className="row">
-          <Button>7</Button>
-          <Button>8</Button>
-          <Button>9</Button>
-          <Button>/</Button>
+          <Button addToInput={addToInput}>7</Button>
+          <Button addToInput={addToInput}>8</Button>
+          <Button addToInput={addToInput}>9</Button>
+          <Button addToInput={addToInput}>/</Button>
         </div>
         <div className="row">
-          <Button>4</Button>
-          <Button>5</Button>
-          <Button>6</Button>
-          <Button>X</Button>
+          <Button addToInput={addToInput}>4</Button>
+          <Button addToInput={addToInput}>5</Button>
+          <Button addToInput={addToInput}>6</Button>
+          <Button addToInput={addToInput}>X</Button>
         </div>
         <div className="row">
-          <Button>1</Button>
-          <Button>2</Button>
-          <Button>3</Button>
-          <Button>+</Button>
+          <Button addToInput={addToInput}>1</Button>
+          <Button addToInput={addToInput}>2</Button>
+          <Button addToInput={addToInput}>3</Button>
+          <Button addToInput={addToInput}>+</Button>
         </div>
         <div className="row">
           <Button>.</Button>

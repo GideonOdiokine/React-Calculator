@@ -6,10 +6,10 @@ import './Button.css'
 const isOperator=val=>{
     return !isNaN(val) || val==="." || val==="="
 }
-const Button = (props) => {
+const Button = ({addToInput, children}) => {
     return (
-        <div className={`button-wrapper ${isOperator(props.children) ? null : 'operator'}`} >
-            {props.children}
+        <div className={`button-wrapper ${isOperator(children) ? null : 'operator'}`} onClick={()=>addToInput(children)} >
+            {children}
         </div>
     )
 }

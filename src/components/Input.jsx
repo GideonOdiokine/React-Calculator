@@ -3,9 +3,9 @@ import './Input.css'
 
 
 
-const Input = (props) => {
+const Input = ({input}) => {
     return (
-       <div className="input">{props.input}</div>
+       <div className="input">{input}</div>
     )
 }
 

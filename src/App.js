@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-// import * as math from 'math.js';
+import * as math from "mathjs";
 import Button from "./components/Button";
 import './App.css'
 import Input from "./components/Input";
 import ClearButton from "./components/ClearButton";
-import { evaluate } from 'mathjs'
+// import { evaluate } from 'mathjs'
 
 
 
@@ -16,7 +16,7 @@ function App() {
   }
 
   const handleEqual = () => {
-    setInput(evaluate(input))
+    setInput(math.evaluate(input))
   }
   return (
     <div className="app">
@@ -32,7 +32,7 @@ function App() {
           <Button addToInput={addToInput}>4</Button>
           <Button addToInput={addToInput}>5</Button>
           <Button addToInput={addToInput}>6</Button>
-          <Button addToInput={addToInput}>X</Button>
+          <Button addToInput={addToInput}>*</Button>
         </div>
         <div className="row">
           <Button addToInput={addToInput}>1</Button>
@@ -43,7 +43,7 @@ function App() {
         <div className="row">
           <Button addToInput={addToInput}>.</Button>
           <Button addToInput={addToInput}>0</Button>
-          <Button addToInput={() => handleEqual} >=</Button>
+          <Button addToInput={handleEqual} >=</Button>
           <Button addToInput={addToInput}>-</Button>
         </div>
         <ClearButton handleClear={() => setInput("")} >Clear</ClearButton>

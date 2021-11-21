@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Button from "./components/Button";
 import './App.css'
 import Input from "./components/Input";
+import ClearButton from "./components/ClearButton";
 
 
 
 function App() {
+  const [input, setInput] = useState("")
   return (
     <div className="app">
       <div className="calc-wrapper">
-        <Input />
+        <Input input={input} />
         <div className="row">
           <Button>7</Button>
           <Button>8</Button>
@@ -35,6 +37,7 @@ function App() {
           <Button>=</Button>
           <Button>-</Button>
         </div>
+        <ClearButton>Clear</ClearButton>
       </div>
     </div>
 
